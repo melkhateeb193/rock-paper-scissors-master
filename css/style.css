@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&display=swap');
+
+* {
+    font-family:  "Barlow Semi Condensed", sans-serif;
+    /* ### Primary */
+    --Scissors-Gradient: hsl(39, 89%, 49%) , hsl(40, 84%, 53%);
+    --Paper-Gradient:  hsl(230, 89%, 62%) , hsl(230, 89%, 65%);
+    --Rock-Gradient: hsl(349, 71%, 52%) , hsl(349, 70%, 56%);
+    --Lizard-Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+    --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+    /* ### Neutral */
+    --Dark-Text: hsl(229, 25%, 31%);
+    --Score-Text: hsl(229, 64%, 46%);
+    --Header-Outline: hsl(217, 16%, 45%);
+    /* ### Background */
+    --Radial-Gradient: hsl(214, 47%, 23%) , hsl(237, 49%, 15%);
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    background-image: Radial-Gradient(var(--Radial-Gradient));
+    background-position: center;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+p {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: 800;
+}
+
+header {
+    max-width: 100%;
+    width: 42rem;
+}
+.choosesContainerImg{
+  width: 100px;
+  height: 80px;
+}
+.topScore {
+    border: 3px solid var(--Header-Outline);
+    border-radius: 10px;
+    max-width: 100%; 
+}
+
+.score {
+    padding: 5px;
+    width: 8rem;
+    max-width: 120px; /* Set a max-width for larger screens */
+    background-color: white;
+    border-radius: 6px;
+    color: black;
+}
+
+.scoreP {
+    color: var(--Score-Text);
+    font-size: 1rem; 
+    font-weight: 800;
+}
+
+.scoreCounter {
+    font-size: 2rem; 
+    color: var(--Dark-Text);
+}
+
+.gamePlay {
+    background-image: url("../images/bg-triangle.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#paper,
+#scissors,
+#rock {
+  margin: 1.5rem;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+.image-container{
+  width: 70px ;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.images{
+  width: 30px ;
+  height: 30px; 
+}
+#paper {
+  background-image :Radial-Gradient(var(--Paper-Gradient));
+}
+
+#scissors {
+  background-image :Radial-gradient(var(--Scissors-Gradient));
+}
+#rock {
+  background-image :Radial-gradient(var(--Rock-Gradient));
+}
+.rulesBtn{
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 6px;
+  color: white;
+  padding: 5px 15px;
+  outline: none;
+}
+.attribution{
+  text-align: center;
+}
+
+.resultParagraph {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.headerResult{
+  font-weight: 800;
+  font-size: 60px;
+}
+#playAgain{
+  background-color: white;
+  border:none;
+  border-radius: 5px;
+  padding: 5px 30px;
+  color: var(--Dark-Text);
+  font-weight: 600;
+  outline: none;
+}
+.rules{
+  position: absolute;
+  width: 400px;
+  height: 100vh;
+  background-color: white;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.rulesHeader{
+  color: var(--Dark-Text);
+  font-weight: 800;
+}
+#closeBtn{
+  cursor: pointer;
+}
+#rulesToggle{
+  position: absolute;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  body {
+      padding: 20px; /* Add more padding for larger screens */
+  }
+
+  .gamePlay {
+      background-size: 50%; /* Adjust background-size for larger screens */
+  }
+
+  .choosesContainerImg {
+      width: 150px; /* Increase width for larger screens */
+      height: 120px; /* Increase height for larger screens */
+  }
+
+  .topScore,
+  .score {
+      max-width: 100%; 
+  }
+
+  .score {
+      width: 10rem; /* Increase width for larger screens */
+      max-width: none; /* Remove max-width for larger screens */
+  }
+
+  .scoreP {
+      font-size: 1.2rem; /* Increase font-size for larger screens */
+  }
+
+  .scoreCounter {
+      font-size: 3rem; /* Increase font-size for larger screens */
+  }
+
+  .button-container {
+      flex-wrap: wrap; /* Allow buttons to wrap on larger screens */
+      justify-content: center; /* Center buttons on larger screens */
+  }
+
+  #paper,
+  #scissors,
+  #rock {
+      margin: 2rem; /* Adjust margin for larger screens */
+      width: 120px; /* Increase width for larger screens */
+      height: 120px; /* Increase height for larger screens */
+  }
+
+  .image-container {
+      width: 90px; /* Increase width for larger screens */
+      height: 90px; /* Increase height for larger screens */
+  }
+
+  .images {
+      width: 40px; /* Increase width for larger screens */
+      height: 40px; /* Increase height for larger screens */
+  }
+
+  #rulesBtn {
+      padding: 10px 30px; /* Increase padding for larger screens */
+  }
+
+  .rules {
+      width: 600px; /* Increase width for larger screens */
+  }
+
+  .rulesHeader {
+      font-size: 24px; /* Increase font-size for larger screens */
+  }
+}

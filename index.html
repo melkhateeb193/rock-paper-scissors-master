@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="topScore d-flex  justify-content-between  align-items-center p-3 ">
+    <div class="choosesContainer">
+    <img class="choosesContainerImg" src="images/logo.svg" alt="logo">
+    </div>
+    <div class="score d-flex justify-content-center align-items-center flex-column ">
+      <p class="scoreP">SCORE</p>
+      <p id="scoreCounter" class="scoreCounter">0</p>
+    </div>
+  </div>
+</header>
+<main>
+  <!-- game Container Container -->
+
+  <div id="gamePlay" class="gamePlay d-flex flex-column justify-content-between align-items-center p-3  ">
+    <div class="button-container">
+      <button id="paper"><span class="image-container"><img class="images" src="images/icon-paper.svg" alt="paper"></span></button>
+      <button id="scissors"><span class="image-container"><img class="images" src="images/icon-scissors.svg" alt="scissors"></span></button>
+    </div>
+    <div >
+      <button id="rock"><span class="image-container"><img class="images"  src="images/icon-rock.svg" alt="rock"></span></button>
+    </div>
+    <div>
+      <button class="rulesBtn">RULES</button>
+    </div>
+  </div>
+<!-- Result Container -->
+  <div id="ResultDiv" class="Result d-flex flex-column  justify-content-between   align-items-center p-3 d-none  ">
+   <div class="resultBtn d-flex ">
+   <div  id="myChoose" class="myChooses d-flex flex-column justify-content-center align-items-center ">
+    <!-- <button id="myChoose"><span class="image-container"><img class="images" src="images/icon-paper.svg" alt="paper"></span></button> -->
+    <p class="resultParagraph">YOU PICKED</p>
+  </div>
+   <div  id="HouseChoose" class="houseChoose  d-flex flex-column justify-content-center align-items-center ">
+    <!-- <button ><span class="image-container"><img class="images" src="images/icon-paper.svg" alt="paper"></span></button> -->
+    <p class="resultParagraph">THE HOUSE PICKED</p>
+  </div>
+   </div>
+    <div class="d-flex flex-column  justify-content-between   align-items-center"> 
+   <h1 id="headerResult" class="headerResult m-2 ">YOU LOSE</h1>
+   <button id="playAgain" class="m-2 ">PLAY AGAIN</button>
+   <button class="rulesBtn" class="m-4 ">RULES</button>
+  </div>
+  </div>
+</main>
+<section id="rulesToggle" class="d-none ">
+  <h1 class="rulesHeader">RULES</h1>
+  <img src="images/image-rules.svg" alt="rules">
+  <img id="closeBtn" src="images/icon-close.svg" alt="close">
+</section>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/melkhateeb193">Mostafa Elkhateeb</a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
