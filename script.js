@@ -68,9 +68,8 @@ choices.forEach(btn => {
         gamePlay.classList.add('d-none');
         ResultDiv.classList.remove('d-none');
         playerChoice = btn;
-        myChoose.appendChild(playerChoice.cloneNode(true));
-        HouseChoose.appendChild(playGame(btn).cloneNode(true));
-        
+        myChoose.append(playerChoice.cloneNode(true));
+        HouseChoose.append(playGame(btn).cloneNode(true));
     })
 })
 
